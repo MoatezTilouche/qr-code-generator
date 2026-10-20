@@ -92,6 +92,12 @@ The production frontend calls the Render backend directly, so it works when host
 
 **Backend setup:** allow your published frontend origin in the Render API's CORS configuration. This is configured in the separate backend repository; a frontend environment variable cannot enable CORS on the API.
 
+For the current production site, set this variable on the **Render backend service** and restart or redeploy that service:
+
+```env
+FRONTEND_ORIGINS=https://qr-code-generator-five-mu.vercel.app
+```
+
 To preview a production build locally:
 
 ```bash
